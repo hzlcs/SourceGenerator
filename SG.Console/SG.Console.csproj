@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SG.CommonGenerator.Abstractions\SG.CommonGenerator.Abstractions.csproj" />
+    <ProjectReference Include="..\SG.CommonGenerator\SG.CommonGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
 </Project>
