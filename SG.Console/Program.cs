@@ -1,18 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-using SG.CommonGenerator.Abstractions;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
-Console.WriteLine("Hello, World!");
+namespace SG.Console;
 
-
-void Fun()
+internal class Program
 {
+    private static void Main(string[] args)
+    {
+        System.Console.WriteLine(new Sample().GetString());
+        
+    }
 
+    void Fun()
+    {
+
+    }
 }
-
-[MapUnsafeAccessor(typeof(Sample), MapUnsafeAccessorAttribute.UnsafeAccessorKind.Method, "GetString")]
-public static partial class UnsafeAccessorExtensions;
-
 
 public class Sample
 {
@@ -21,4 +23,5 @@ public class Sample
     {
         return "Hello, World!";
     }
+
 }
